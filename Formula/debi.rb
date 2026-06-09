@@ -5,21 +5,21 @@
 class Debi < Formula
   desc "Command-line interface for the Debi API"
   homepage "https://debi.pro"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/debipro/cli/releases/download/v0.1.6/debi_0.1.6_mac-os_x86_64.tar.gz"
-      sha256 "0f41f760b9da3f04ee572ee57375394eb8e56bc0cafec3c8bb1329c830d1db3b"
+      url "https://github.com/debipro/cli/releases/download/v0.1.7/debi_0.1.7_mac-os_x86_64.tar.gz"
+      sha256 "3226150e78545adc9a3b9ab0c79a77dc0a029ce42d34d625f633965c2f209bcd"
 
       define_method(:install) do
         bin.install "debi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/debipro/cli/releases/download/v0.1.6/debi_0.1.6_mac-os_arm64.tar.gz"
-      sha256 "a42ece36726bb9cee815c6208cc6356cc21f82f0cd20902af7defd78334a94ac"
+      url "https://github.com/debipro/cli/releases/download/v0.1.7/debi_0.1.7_mac-os_arm64.tar.gz"
+      sha256 "4fff918f426d7deff0ec0b83fd402b88e71d924d0e258a45842b4ed43adb1bc9"
 
       define_method(:install) do
         bin.install "debi"
@@ -29,15 +29,15 @@ class Debi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/debipro/cli/releases/download/v0.1.6/debi_0.1.6_linux_x86_64.tar.gz"
-      sha256 "95e5a5da38bb65e873b60e52ddae5727bbb963d6aec6d5ed64b5c1b17999d8be"
+      url "https://github.com/debipro/cli/releases/download/v0.1.7/debi_0.1.7_linux_x86_64.tar.gz"
+      sha256 "52fd10480bd514dee0e33ffd8ccaed92b89b42fc86e1ea00b8832b3d9ba469db"
       define_method(:install) do
         bin.install "debi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/debipro/cli/releases/download/v0.1.6/debi_0.1.6_linux_arm64.tar.gz"
-      sha256 "72d0864a434d8f53670e3edb5fac661c2fcddc27aa0ff63d618a8bb5558baa77"
+      url "https://github.com/debipro/cli/releases/download/v0.1.7/debi_0.1.7_linux_arm64.tar.gz"
+      sha256 "59a250e69c0e5a9b6039900e6ac2fc9e46038e9d5c17a87350de7048a23c9eed"
       define_method(:install) do
         bin.install "debi"
       end
